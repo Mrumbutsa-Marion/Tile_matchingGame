@@ -82,4 +82,48 @@ const matrixGenerator = (cardValues, size = 4) => {
     }
 
     gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
-}
+
+    //The cards to be displayed
+    cards = document.querySelectorAll(".card-container");
+    cards.forEach((card) => {
+        card.addEventListener("click", () => {
+            if (!card.classList.contains("matched")){
+                card.classList.add("flipped");
+                if (!firstCard){
+                    firstCard = card;
+                    firstCardValue = card.getAttribute("data-card-value");
+                } else{
+                    movesCounter();
+                    secondCard = card;
+                    let secondCardValue = card.getAttribute("data-card-value");
+          if (firstCardValue == secondCardValue){
+            firstCard.classList.add("matched");
+            secondCard.classList.add("matched");
+            firstCard = false;
+            winCount += 1;
+         
+
+            if (winCount == Math.floor(cardValues.length/2)) {
+                result.innerHTML = `<h2>Congratulation 🥳 🎊 </h2>
+                <h3>Mission complete 🎉💃</h3>
+              <h4>You have ${movesCount} moves</h4>
+              <button class="play-again"onclick="TryAgain()">
+              Try again 😄</a>
+          </button>`;
+             stopGame();
+            }
+          } else {
+            let [tempFirst, tempSecond] = [firstCard, secondCard];
+            firstCard = false;
+            secondCard = false;
+            let delay = setTimeout(() => {
+              tempFirst.classList.remove("flipped");
+              tempSecond.classList.remove("flipped");
+            }, 900);
+          }
+        }
+      }
+    });
+ });
+};
+
