@@ -127,3 +127,9 @@ const matrixGenerator = (cardValues, size = 4) => {
  });
 };
 
+
+//starting the game
+
+startButton.addEventListener("click", () => {
+
+});
