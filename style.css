@@ -26,7 +26,7 @@ h1{
 .game-container{
     position: relative;
     width: 100%;
-    display: flex;
+    display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 0.6em;
 }
@@ -37,6 +37,9 @@ h1{
 .stats-container{
     text-align: right;
     margin-bottom: 1.2em;
+}
+.stats-container span{
+    font-weight: 600;
 }
 .card-container{
     position: relative;
@@ -54,7 +57,7 @@ h1{
     align-items: center;
     display: flex;
     justify-content: center;
-    transition: transform 0.75 ease-out;
+    transition: transform 0.7s ease-out;
     backface-visibility: hidden;
 }
 .card-before{
@@ -87,8 +90,7 @@ button{
     border: none;
     border-radius: 0.3em;
     padding: 1em 20px;
-    background-color: #000000;
-    color: #ffffff;
+    cursor: pointer;
 }
 #stop{
     font-size: 1.1em;
