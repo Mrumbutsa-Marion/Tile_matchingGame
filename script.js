@@ -121,5 +121,14 @@ const matrixGenerator = (cardValues, size = 4) => {
 };
 
 
-  
+startButton.addEventListener("click", () => {
+        movesCount = 0;
+        seconds = 0;
+        minutes = 0;
+        basic.classList.add("hide");
+        startButton.classList.remove("hide");
+        startButton.classList.add("hide");
+        moves.innerHTML = `<span>Moves:</span>${movesCount}`;
+        initializer();
+});
 
