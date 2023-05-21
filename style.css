@@ -114,3 +114,10 @@ button{
     font-size: 1.9em;
     margin: 0.6em 0 1em 0;
 }
+.tips{
+    font-size: 10px;
+    padding: 5px;
+    list-style-type: circle;
+    margin-left: 15px;
+    margin-top: 13%;
+}

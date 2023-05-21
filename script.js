@@ -21,5 +21,26 @@ const items = [
     {name: "shower", images: "shower.png"},
     {name: "utensils", images: "utensils.png"},
     {name: "water_save", images: "water_save.png"},
-    
-]
+];
+
+//The initial time 
+let seconds = 0,
+    minutes = 0;
+
+let moveCount = 0,
+    winCount = 0;
+
+//For the timer
+const timeGenerator = () => {
+    seconds +=1;
+    if (seconds >=60) {
+        minutes += 1;
+        seconds = 0;
+    }
+
+    //formating the time that will be displayed
+    let secondValue = seconds < 10 ? `0${seconds}` : seconds;
+    let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
+    timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondValue}`;
+};
+
