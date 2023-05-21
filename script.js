@@ -122,13 +122,32 @@ const matrixGenerator = (cardValues, size = 4) => {
 
 
 startButton.addEventListener("click", () => {
-        movesCount = 0;
-        seconds = 0;
-        minutes = 0;
-        basic.classList.add("hide");
-        startButton.classList.remove("hide");
-        startButton.classList.add("hide");
-        moves.innerHTML = `<span>Moves:</span>${movesCount}`;
-        initializer();
-});
+    movesCount = 0;
+    seconds = 0;
+    minutes = 0;
+    basic.classList.add("hide");
+    stopButton.classList.remove("hide");
+    startButton.classList.add("hide");
+    
+    moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
+    initializer();
+  });
+  
 
+  stopButton.addEventListener(
+    "click",
+    (stopGame = () => {
+      basic.classList.remove("hide");
+      stopButton.classList.add("hide");
+      startButton.classList.remove("hide");
+      clearInterval(interval);
+    })
+  );
+
+const initializer = () => {
+    result.innerText = "";
+    winCount = 0;
+    let cardValues = generateRandom();
+    console.log(cardValues);
+    matrixGenerator(cardValues);
+  };
