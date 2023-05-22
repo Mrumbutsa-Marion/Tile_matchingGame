@@ -1,141 +1,151 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  background-color: #c8e456;
-}
-.carrier{
-  box-sizing: content-box;
-  width: 26.87em;
-  padding: 2.5em 3em;
-  background-color: #ffffff;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  border-radius: 0.6em;
-  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
-}
-h1{
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-
-.tiles-game {
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 0.6em;
-}
-.tiles-game img {
-  width: 100%;
-  height: 100%;
-}
-.first-point {
-  text-align: right;
-  margin-bottom: 1.2em;
-}
-.first-point span {
-  font-weight: 600;
-}
-.card-container {
-  position: relative;
-  width: 6.25em;
-  height: 6.25em;
-  cursor: pointer;
-}
-.card-before,
-.card-after {
-  position: absolute;
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 4px solid #000000;
-  transition: transform 0.7s ease-out;
-  backface-visibility: hidden;
-}
-.card-before {
-  background-color: #b5e456;
-  font-size: 2.8em;
-  font-weight: 600;
-}
-.card-after {
-  background-color: #ffffff;
-  transform: rotateY(180deg);
-}
-.card-container.flipped .card-before {
-  transform: rotateY(180deg);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-color: #c8e456;
+  }
+  .carrier{
+    box-sizing: content-box;
+    width: 26.87em;
+    padding: 2.5em 3em;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  }
+  h1{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   
-}
-.card-container.flipped .card-after {
-  transform: rotateY(0deg);
-}
-.basic-function {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  background-color: #b5e456;
-  /*background-color: #56B3E4;*/
-  top: 0;
-}
-button {
-  border: none;
-  border-radius: 0.3em;
-  padding: 1em 1.5em;
-  cursor: pointer;
-}
-#stop {
-  font-size: 1.1em;
-  display: block;
-  margin: 1.1em auto 0 auto;
-  background-color: #000000;
-  color: #ffffff;
-}
-.basic-function button {
-  font-size: 1.3em;
-  box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
-}
-.hide {
-  display: none;
-}
-#result {
-  text-align: center;
-}
-#result h2 {
-  font-size: 2.5em;
-}
-#result h4 {
-  font-size: 1.8em;
-  margin: 0.6em 0 1em 0;
-}
-.tips {
-  font-size: 10px;
-  padding: 5px;
-  list-style-type: circle;
-  margin-left: 15px;
-  margin-top: 13%;
-}
-h2{
-  margin-left: 60px;
-}
-h3{
-  font-size: 1.9em;
-  margin-top: 10px;
-  text-align: center;
-  margin-left: 60px;
-}
+  
+  .tiles-game {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0.6em;
+  }
+  .tiles-game img {
+    width: 100%;
+    height: 100%;
+  }
+  .first-point {
+    text-align: right;
+    margin-bottom: 1.2em;
+  }
+  .first-point span {
+    font-weight: 600;
+  }
+  .card-container {
+    position: relative;
+    width: 6.25em;
+    height: 6.25em;
+    cursor: pointer;
+  }
+  .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+  .card-before {
+    background-color: #b5e456;
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+  .card-after {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+  }
+  .card-container.flipped .card-before {
+    transform: rotateY(180deg);
+    
+  }
+  .card-container.flipped .card-after {
+    transform: rotateY(0deg);
+  }
+  .basic-function {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #b5e456;
+    /*background-color: #56B3E4;*/
+    top: 0;
+  }
+  button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+  }
+  #stop {
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    background-color: #b5e456;
+    color: #000000;
+    border: 8px;
+  }
+  .basic-function button {
+    font-size: 1.3em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+  }
+  .hide {
+    display: none;
+  }
+  #result {
+    text-align: center;
+  }
+  #result h2 {
+    font-size: 2.5em;
+  }
+  #result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+  }
+  .tips {
+    font-size: 10px;
+    padding: 5px;
+    list-style-type: circle;
+    margin-left: 15px;
+    margin-top: 13%;
+  }
+  h2{
+    margin-left: 60px;
+  }
+  h3{
+    font-size: 1.9em;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 60px;
+  }
 
+
+.play-again{
+    background-color: #f9e9e9;
+    padding: 0.7 rem 1 rem;
+    font-size: 1em;
+    width: 40%;
+    margin-top: px;
+    margin-bottom: 40px;
+}
 
